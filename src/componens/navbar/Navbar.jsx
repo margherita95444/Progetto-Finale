@@ -34,6 +34,8 @@ export default function Navbar() {
                             ))
                         }
                     </ul>
+                    <Link className="nav-link text-dark" to="/contact/:pageId">Contact</Link>
+                    <Link className="nav-link text-dark" to="/about-us/:pageId">About Us</Link>
                 </div>
             </div>
         </nav>
