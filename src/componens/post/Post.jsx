@@ -18,7 +18,7 @@ export default class Post extends React.Component {
                     <p>{this.props.post.created_at}</p>
                     <p>{this.props.post.author}</p>
                 </div>
-                <Link className="btn btn-primary" to={'/'} >Details</Link>
+                <Link className="btn btn-primary" to={ `/posts/${this.props.post.id}`} >Details</Link>
             </div>
         );
     }

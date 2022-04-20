@@ -4,6 +4,7 @@ import Navbar from './componens/navbar/Navbar';
 import Footer from './componens/footer/Footer';
 import NotFound from './componens/not-found/NotFound';
 import Posts from './componens/posts/Posts';
+import PostDetail from './componens/post-detail/PostDetail';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Outlet />}>
-        <Route index element={<Posts />} />
+          <Route path="posts/:postId" element={<PostDetail />} />
+          <Route index element={<Posts />} />
         </Route>
 
         <Route path="*" element={<NotFound />} /> 
