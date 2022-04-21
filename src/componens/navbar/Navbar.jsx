@@ -18,9 +18,9 @@ export default function Navbar() {
     //console.log(postsCategory)
     
     return (
-        <nav className="navbar navbar-expand-lg shadow-lg ">
+        <nav className="navbar navbar-expand-lg shadow-lg sticky-top">
             <div className="container-fluid"> 
-                <Link className="navbar-brand text-dark" to="/">BLOG</Link>
+                <Link className="navbar-brand" to="/"><img src="./assets/images/candy.png" alt="" /></Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -28,14 +28,14 @@ export default function Navbar() {
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         {
                             postsCategories.map(postsCategory => (
-                                <li key={postsCategory.id} className="nav-link text-dark">
-                                    <Link className="nav-link text-dark" to={`posts-categories/${postsCategory.id}/posts`}>{postsCategory.name}</Link>
+                                <li key={postsCategory.id} className="nav-link">
+                                    <Link className="nav-link" to={`posts-categories/${postsCategory.id}/posts`}>{postsCategory.name.toUpperCase()}</Link>
                                 </li>
                             ))
                         }
                     </ul>
-                    <Link className="nav-link text-dark" to="/contact/:pageId">Contact</Link>
-                    <Link className="nav-link text-dark" to="/about-us/:pageId">About Us</Link>
+                    <Link className="nav-link" to="/contact/39">Contact</Link>
+                    <Link className="nav-link" to="/about-us/37">About Us</Link>
                 </div>
             </div>
         </nav>

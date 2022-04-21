@@ -1,27 +1,5 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react';
 import { getPageContact } from '../../functions/pages';
-
-// export default function Contact() {
-//     const [hasLoaded, setHasLoaded] = useState(false);
-//     const [page, setPage] = useState([]);
-//     const {pageId} = useParams();
-
-//     if(!hasLoaded){
-//         getPages(pageId).then(page => {
-//             setPage(page);
-//             setHasLoaded(true);
-//         });
-//     }
-
-//     return (
-            
-//         <div>
-//             {page.id}
-//         </div>
-//     );
-// }
- 
 
 export default class Contact extends React.Component {
     constructor(props) {
@@ -40,9 +18,13 @@ export default class Contact extends React.Component {
         console.log(this.state.pageContact)
 
         return (
-            <div>
-                <h1 className="mt-5 text-center">{this.state.pageContact.title}</h1>
-                <p className="text-center mt-5" dangerouslySetInnerHTML={{ __html: this.state.pageContact.content }}></p>
+            <div className='container'>
+                <div className='row justify-content-center'>
+                    <div className='col-6'>
+                        <h1 className="mt-5 text-center">{this.state.pageContact.title}</h1>
+                        <p className="text-center mt-5" dangerouslySetInnerHTML={{ __html: this.state.pageContact.content }}></p>
+                    </div>
+                </div>
             </div>
         );
     }

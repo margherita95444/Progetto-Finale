@@ -18,9 +18,11 @@ export default class Contact extends React.Component {
         console.log(this.state.pageAboutUs)
 
         return (
-            <div >
-                <h1 className="mt-5 text-center">{this.state.pageAboutUs.title}</h1>
-                <p dangerouslySetInnerHTML={{ __html: this.state.pageAboutUs.content }}></p>
+            <div className='container'>
+                <p className='row justify-content-center'>
+                    <h1 className="mt-5 text-center">{this.state.pageAboutUs.title}</h1>
+                    <p dangerouslySetInnerHTML={{ __html: this.state.pageAboutUs.content }}></p>
+                </p>
             </div>
         );
     }

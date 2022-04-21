@@ -20,8 +20,8 @@ function App() {
           <Route path="posts-categories/:categoryId/posts" element={<PostsCategory />} />
         </Route>
 
-        <Route path="/contact/:pageId" element={<Contact />} />
-        <Route path="/about-us/:pageId" element={<AboutUs />} />
+        <Route path="/contact/39" element={<Contact />} />
+        <Route path="/about-us/37" element={<AboutUs />} />
         <Route path="*" element={<NotFound />} /> 
       </Routes>
       <Footer />

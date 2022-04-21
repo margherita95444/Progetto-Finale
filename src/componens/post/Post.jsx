@@ -8,17 +8,14 @@ export default class Post extends React.Component {
 
     render() {
         return (
-            <div className="mt-5 mx-5 col-6">
+            <div className="mt-5 mx-5">
                 <div >
-                    <p>
-                        <span>{this.props.post.id}</span>
-                        <span>   - {this.props.post.title}</span>
-                    </p>
+                    <h1>{this.props.post.title}</h1>
                     <p dangerouslySetInnerHTML={{ __html: this.props.post.content }}></p>
                     <p>{this.props.post.created_at}</p>
                     <p>{this.props.post.author}</p>
                 </div>
-                <Link className="btn btn-primary" to={ `/posts/${this.props.post.id}`} >Details</Link>
+                <Link className="btn" to={ `/posts/${this.props.post.id}`} >Details</Link>
             </div>
         );
     }

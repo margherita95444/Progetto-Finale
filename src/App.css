@@ -1,15 +1,63 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
 body{
-  color: black;
+  background-color: rgb(126, 14, 55);
 }
 
-footer {
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:100%;
+.nav-link, .navbar-brand, body, .btnMuffin{
+  color: white !important;
 }
+
+nav, .footer, .btn{
+  background-color: rgb(182, 27, 83);
+  color: white
+}
+
+.imgMuffin{
+  width: 500px;
+  height:500px;
+  margin-top: 50px;
+}
+
+.imgfooter{
+  width: 70px;
+}
+
+img{
+  width: 90px;
+}
+
+.btnMuffin{
+  font-size: 100px;
+}
+
+.back{
+  position: relative;
+  top: 30px;
+}
+
+.backdot{
+  position: relative;
+  top: 30px;
+  font-size: 50px;
+}
+
+.postDetail{
+  margin-right: 250px;
+  margin-left: 250px;
+}
+
+h1{
+  font-family: 'Lobster', cursive;
+  margin-bottom: 30px;
+}
+
+p{
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.2em;
+  text-align:justify;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

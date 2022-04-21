@@ -20,8 +20,9 @@ export default class Posts extends React.Component {
         const card = this.state.posts.map(post => <Post post={post} key={post.id}/>);
 
         return (
-            <div >
-                { card } 
+            <div className="row">
+                <img className="col-6 imgMuffin" src="./assets/images/muffin.png" alt="" />
+                <div className="col-6">{ card } </div>
             </div>
         );
     }

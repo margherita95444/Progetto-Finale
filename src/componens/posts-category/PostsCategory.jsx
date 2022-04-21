@@ -15,11 +15,8 @@ export default function PostsCategory() {
     const rows = postsCategory.map(post => <Post post={post} key={post.id}/>);
     
     return (
-            <div>
-                <h1>Posts</h1>
-                <div className="mt-5">
-                        {rows}    
-                </div>
-            </div>
+        <div className="mt-5">
+            {rows}    
+        </div>
     );
 }

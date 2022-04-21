@@ -1,16 +1,16 @@
 
 import { Page } from "../models/Page"
 
-// export const getPages = (pageId) => {
-//     return fetch(`http://wordpress.test/wp-json/wp/v2/pages`)
-//         .then(resp => resp.json())
-//         .then(page => pageObjToModel(page));     
-// };
+export const getPages = (pageId) => {
+    return fetch(`http://wordpress.test/wp-json/wp/v2/pages`)
+        .then(resp => resp.json())
+        .then(page => pageObjToModel(page));     
+};
 
 export const getPageContact = () => {
     return fetch(`http://wordpress.test/wp-json/wp/v2/pages/39`)
         .then(resp => resp.json())
-        .then(page => pageObjToModel(page));     
+        .then(page => pageObjToModel(page));    
 };
 
 export const getPageAboutUs = () => {
