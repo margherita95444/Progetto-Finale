@@ -1,30 +1,27 @@
-import React from "react";
-import { getPosts } from '../../functions/posts';
+import {React, useState} from "react";
+import { getPosts } from "../../functions/posts";
 import Post from '../post/Post'
 
-export default class Posts extends React.Component {
-    constructor(props) {
-        super(props);
+export default function PostDetail () {
+    const [hasLoaded, setHasLoaded] = useState(false);
+    const [posts, setPosts] = useState([]);
 
-        this.state = {
-            posts: []
-        };
+    if (!hasLoaded) {
+        getPosts().then(posts => setPosts(posts));
+        setHasLoaded(true);
     }
 
-    componentDidMount() {
-        getPosts().then(posts => this.setState({posts}));    
-    }
+    //console.log(posts)
 
-    render() {
-        console.log(this.state.posts)
-        const card = this.state.posts.map(post => <Post post={post} key={post.id}/>);
+    const card = posts.map(post => <Post post={post} key={post.id}/>);
 
-        return (
-            <div className="row">
-                <img className="col-6 imgMuffin" src="./assets/images/muffin.png" alt="" />
-                <div className="col-6">{ card } </div>
+    return (
+        <div className="row justify-content-center">
+            <div className="col-6">
+                { card } 
             </div>
-        );
-    }
+        </div>
+    );
 }
+
  

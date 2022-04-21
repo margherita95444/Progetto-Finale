@@ -7,6 +7,10 @@ export default class Post extends React.Component {
     }
 
     render() {
+        
+        console.log(this.props.post);
+        console.log(this.props.media);
+
         return (
             <div className="mt-5 mx-5">
                 <div >
