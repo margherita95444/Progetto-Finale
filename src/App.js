@@ -6,8 +6,7 @@ import NotFound from './componens/not-found/NotFound';
 import Posts from './componens/posts/Posts';
 import PostDetail from './componens/post-detail/PostDetail';
 import PostsCategory from './componens/posts-category/PostsCategory';
-import Contact from './componens/contact/Contact';
-import AboutUs from './componens/about-us/AboutUs';
+import Page from './componens/page/Page';
 
 function App() {
   return (
@@ -20,8 +19,7 @@ function App() {
           <Route path="posts-categories/:categoryId/posts" element={<PostsCategory />} />
         </Route>
 
-        <Route path="/contact/39" element={<Contact />} />
-        <Route path="/about-us/37" element={<AboutUs />} />
+        <Route path="pages/:pageId" element={<Page />} />
         <Route path="*" element={<NotFound />} /> 
       </Routes>
       <Footer />

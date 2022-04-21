@@ -19,8 +19,12 @@ nav, .footer, .btn{
   margin-top: 50px;
 }
 
-.imgfooter{
+.imgfooterbicm{
   width: 70px;
+}
+
+.imgfootercb{
+  width: 100px;
 }
 
 img{
@@ -55,22 +59,16 @@ h1{
 p{
   font-family: 'Dosis', sans-serif;
   font-size: 1.2em;
-  text-align:justify;
 }
 
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.notFound{
+  font-size: 3em;
+  text-align: center;
+  margin-top:160px;
+  margin-bottom: 230px;
 }
 
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.page{
+  margin-bottom: 75px;
 }
+

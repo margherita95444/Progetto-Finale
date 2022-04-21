@@ -1,7 +1,7 @@
 import { Post } from "../models/Post"
 
 export const getPostsCategory = (categoryId = []) => {
-    return fetch(`http://wordpress.test/wp-json/wp/v2/posts?categories=${categoryId}`) //${categoryId}//http://wordpress.test/wp-json/wp/v2/posts?categories=3
+    return fetch(`http://wordpress.test/wp-json/wp/v2/posts?categories=${categoryId}`) 
         .then(resp => resp.json())
         .then(posts => posts.map(post => postObjToModel(post)));
 };
